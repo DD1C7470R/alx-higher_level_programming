@@ -16,7 +16,7 @@ int check_cycle(listint_t *list)
 	if (list->next == NULL)
 		return (0);
 
-	while (jump->next != NULL)
+	while (jump != NULL && initial !=NULL && jump->next != NULL)
 	{
 		jump = jump->next->next;
 		initial = initial->next;
@@ -24,6 +24,7 @@ int check_cycle(listint_t *list)
 		if (initial == jump)
 			return (1);
 	}
+
 	return (0);
 }
 
