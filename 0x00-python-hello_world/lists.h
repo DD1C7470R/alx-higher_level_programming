@@ -14,12 +14,12 @@ typedef struct link_list
 {
 	int data;
 	struct link_list *next;
-} l_node;
+} listint_t;
 
-size_t print_list(const l_node *head);
-l_node *add_node(l_node **head, const int num);
-void free_list(l_node *head);
-int check_cycle(l_node *list);
+size_t print_listint(const listint_t *head);
+listint_t *add_nodeint(listint_t **head, const int num);
+void free_listint(listint_t *head);
+int check_cycle(listint_t *list);
 
 #endif /* LISTS_H */
 

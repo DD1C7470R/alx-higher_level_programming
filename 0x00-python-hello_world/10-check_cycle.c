@@ -6,10 +6,10 @@
  *
  * Return: 1 if loop exists, 0 if not
  */
-int check_cycle(l_node *list)
+int check_cycle(listint_t *list)
 {
-	l_node *jump = list;
-	l_node *initial = list;
+	listint_t *jump = list;
+	listint_t *initial = list;
 
 	if (list == NULL)
 		return (0);
