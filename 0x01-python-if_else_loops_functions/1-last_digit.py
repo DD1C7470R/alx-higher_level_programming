@@ -8,4 +8,4 @@ elif last_num == 0:
     print(f"The last digit of {number} is {last_num} and is zero")
 else:
     print(f"The last digit of {number} is {last_num} and is less than 6 and not 0")
-~       
+     
