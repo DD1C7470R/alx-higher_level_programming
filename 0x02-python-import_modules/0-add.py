@@ -2,4 +2,10 @@
 from add_0 import add
 a = 1
 b = 2
-print("<a {}> + <b {}> = <add(a, b) {}>". format(a, b, add(a, b)))
+print("{} + {} = {}".format(a, b, add(a, b)))
+
+if __name__ == '__main__':
+    import sys
+    main(sys.argv)
+
+
