@@ -11,7 +11,6 @@ if __name__ == "__main__":
     else:
         operator = argv[2]
         a = int(argv[1])
-        print(argv[3])
         b = int(argv[3])
         if argv[2] == '+':
             print("{} + {} = {}". format(a, b, add(a, b)))
