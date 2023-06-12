@@ -12,9 +12,6 @@ int is_palindrome(listint_t **head)
 	listint_t *prev = NULL;
 	listint_t *next = NULL;
 
-	int right_end[100];
-	int idx = 0,  j = 0;
-
 	if (*head == NULL || (*head)->next != NULL)
 		return (1);
 
