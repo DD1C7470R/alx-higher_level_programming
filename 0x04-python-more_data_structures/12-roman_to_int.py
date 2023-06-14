@@ -13,7 +13,8 @@ def roman_to_int(roman_string):
         if k in roman_numerals_table:
             if prev != '':
                 if roman_numerals_table[k] > roman_numerals_table[prev]:
-                    sum_val = roman_numerals_table[k] - roman_numerals_table[prev]
+                    sum_val = roman_numerals_table[k] -
+                    roman_numerals_table[prev]
                     prev = k
                 else:
                     sum_val += roman_numerals_table[k]
