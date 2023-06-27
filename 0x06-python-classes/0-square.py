@@ -2,12 +2,13 @@
 
 class Square:
     """an empty class Square that defines a square.
-
+    Square:
+        an empty class Square that defines a square.
     Example:
         $ python3 example_google.py
 
     Attributes:
-        None
+        Square: an empty class Square that defines a square.
 
     Todo:
         * area
