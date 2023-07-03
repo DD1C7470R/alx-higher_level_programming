@@ -95,7 +95,7 @@ class Rectangle:
         rect = []
         idx = 0
         while idx < columns:
-            rect.append(self.print_symbol * rows)
+            rect.append(str(self.print_symbol) * rows)
             idx += 1
         return ("\n").join(rect)
 
