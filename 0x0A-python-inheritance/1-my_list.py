@@ -14,4 +14,4 @@ class MyList(list):
         """
         A = self[:]
         A.sort()
-        return sorted(A)
+        print(sorted(A))
