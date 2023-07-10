@@ -12,6 +12,6 @@ class MyList(list):
     def print_sorted(self):
         """Defines a class MyList that inherits from list
         """
-        A = self.copy()
+        A = self[:]
         A.sort()
         return sorted(A)
