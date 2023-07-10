@@ -1,0 +1,22 @@
+"""
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    
+    case value is not int
+    >>> BaseGeometry().integer_validator("name", "value")
+    Traceback (most recent call last):
+      ...
+    TypeError: name must be an integer
+
+    case value is less than 0
+    >>> BaseGeometry().integer_validator("age", -2)
+    Traceback (most recent call last):
+      ...
+    ValueError: age must be greater than 0
+
+    case value is equal to 0
+    >>> BaseGeometry().integer_validator("distance", 0)
+    Traceback (most recent call last):
+      ...
+    ValueError: distance must be greater than 0
+
+"""
