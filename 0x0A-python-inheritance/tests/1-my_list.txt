@@ -78,6 +78,7 @@
 	 TypeError: print_sorted() takes 1 positional argument but 2 were given
 
     Checking that appendng works:
+	 >>> l = MyList()
 	 >>> l.append(1)
 	 >>> l.append(2)
 	 >>> l.append(3)
