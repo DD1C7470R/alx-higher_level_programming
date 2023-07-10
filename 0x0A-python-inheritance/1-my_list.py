@@ -6,9 +6,8 @@
 class MyList(list):
     """Defines a class MyList that inherits from list
     """
-    def __init__(self, A):
+    def __init__(self):
         super().__init__()
-        self.A = A
 
     def print_sorted(self):
-        return sorted(self.A)
+        return self.sort()
