@@ -30,7 +30,6 @@ class Rectangle(BaseGeometry):
     """
     def __init__(self, width, height):
         """A reprresentation of Rectangle."""
-        super().__init__()
         self.integer_validator("width", width)
         self.__width = width
         self.integer_validator("height", height)
