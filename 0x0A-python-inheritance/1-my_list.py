@@ -12,4 +12,4 @@ class MyList(list):
     def print_sorted(self):
         """Defines a class MyList that inherits from list
         """
-        return self.sort()
+        return sorted(self.copy())
