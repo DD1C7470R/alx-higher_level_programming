@@ -6,13 +6,13 @@ that creates an Object from a “JSON file”
 
 import json
 from pathlib import Path
-
+import sys
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
-def add_item(A):
+def add_item():
     item_list = []
     my_file = Path("add_item.json")
 
@@ -27,6 +27,4 @@ def add_item(A):
         save_to_json_file(item_list, "add_item.json")
 
 
-if __name__ == "__main__":
-    import sys
-    add_item(sys.argv[1:])
+add_item(sys.argv[1:])
