@@ -13,4 +13,4 @@ def read_file(filename=""):
     if filename is None or len(filename) == 0:
         return ""
     with open(filename, mode='r',  encoding="UTF8") as my_file:
-        print(my_file.read())
+        print(my_file.read(), end='')
