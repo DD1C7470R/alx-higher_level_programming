@@ -25,3 +25,8 @@ def add_item(A):
         for x in A:
             item_list.append(x)
         save_to_json_file(item_list, "add_item.json")
+
+
+if __name__ == "__main__":
+    import sys
+    add_item(sys.argv[1:])
