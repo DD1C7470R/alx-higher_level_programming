@@ -12,7 +12,6 @@ def class_to_json(obj):
     (list, dictionary, string, integer and boolean)
     for JSON serialization of an obje
     """
-    if obj is not None:
-        return
+
     json = obj.__dict__
     return json
