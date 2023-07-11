@@ -14,9 +14,5 @@ def class_to_json(obj):
     """
     if obj is not None:
         return
-    keys = []
-    for attr in obj.__dict__:
-        if attr is not None:
-            keys.append((attr, obj.__getattribute__(attr)))
-
-    return dict(keys)
+    json = obj.__dict__
+    return json
