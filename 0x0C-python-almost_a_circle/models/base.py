@@ -70,5 +70,5 @@ class Base:
                     instance = cls.create(**dict_obj)
                     instance_list.append(instance)
                 return instance_list
-        except:
+        except Exception:
             return []
