@@ -1,6 +1,6 @@
 import unittest
 from models.square import Square
-
+import io
 from models.base import Base
 import sys
 sys.path.append(".")

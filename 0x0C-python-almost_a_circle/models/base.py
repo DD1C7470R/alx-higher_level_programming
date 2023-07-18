@@ -19,14 +19,20 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns the dictionary representation of list"""
-        json_list = json.dumps(list_dictionaries)
-        return json_list
+        if list_dictionaries:
+            json_list = json.dumps(list_dictionaries)
+            return json_list
+        else:
+            return '[]'
 
     @staticmethod
     def from_json_string(json_string):
         """Returns the string list representation back to a list"""
-        json_list = json.loads(json_string)
-        return json_list
+        if json_string:
+            json_list = json.loads(json_string)
+            return json_list
+        else:
+            return []
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -54,13 +60,15 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        with open('' + cls.__name__ + '.json', 'r', 'UTF8') as my_file:
+        try:
+            with open('' + cls.__name__ + '.json', 'r', 'UTF8') as my_file:
 
-            json_list = my_file.read()
-            result = cls.from_json_string(json_list)
-            instance_list = []
-            for dict_obj in result:
-                instance = cls.create(**dict_obj)
-                instance_list.append(instance)
-            return instance_list
-        return []
+                json_list = my_file.read()
+                result = cls.from_json_string(json_list)
+                instance_list = []
+                for dict_obj in result:
+                    instance = cls.create(**dict_obj)
+                    instance_list.append(instance)
+                return instance_list
+        except:
+            return []

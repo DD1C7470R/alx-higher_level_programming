@@ -105,9 +105,9 @@ class Rectangle(Base):
             rows += 1
 
     def __str__(self):
-        return ("{} ({:d}) {}/{} - {}/{}"
+        return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(
-                    type(self).__name__, self.id,
+                    self.id,
                     self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
@@ -115,8 +115,11 @@ class Rectangle(Base):
 
         attr = ['id', 'width', 'height', 'x', 'y']
         if args:
+            i = 0
             for idx, value in enumerate(args):
-                setattr(self, attr[idx], value)
+                if i < len(attr):
+                    setattr(self, attr[idx], value)
+                    i += 1
         else:
             if kwargs:
                 for key, value in kwargs.items():

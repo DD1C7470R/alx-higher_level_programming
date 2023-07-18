@@ -10,7 +10,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return ("{} ({:d}) {}/{} - {:d}"
+        return ("[{}] ({}) {}/{} - {}"
                 .format(
                     type(self).__name__, self.id,
                     self.x, self.y, self.width
@@ -31,8 +31,11 @@ class Square(Rectangle):
         """Updates the instance attributess of a square class"""
         attr = ['id', 'size', 'x', 'y']
         if args:
+            i = 0
             for idx, value in enumerate(args):
-                setattr(self, attr[idx], value)
+                if i < len(attr):
+                    setattr(self, attr[idx], value)
+                    i += 1
         else:
             if kwargs:
                 for key, value in kwargs.items():
