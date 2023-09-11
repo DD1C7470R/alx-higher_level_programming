@@ -2,7 +2,7 @@
 
 const myArray = [];
 for (let i = 2; i < process.argv.length; i++) {
-  myArray.push(Number(process.argv[i]));
+  if (Number(process.argv[i])) { myArray.push(Number(process.argv[i])); }
 }
 
 function secondLargest (myArrary) {
