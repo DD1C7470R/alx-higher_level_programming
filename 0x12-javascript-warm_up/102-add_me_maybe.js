@@ -1,7 +1,8 @@
 #!/usr/bin/node
 
 function addMeMaybe (num, cb) {
-  cb(num + 1);
+  const nb = num + 1;
+  cb((nb));
 }
 
 module.exports = { addMeMaybe };
