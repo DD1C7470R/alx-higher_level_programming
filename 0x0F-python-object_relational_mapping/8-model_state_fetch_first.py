@@ -18,4 +18,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     first_state = session.query(State).first()
-    print(first_state)
+    if first_state is None:
+        print('Nothing')
+    else:
+        print(first_state)
