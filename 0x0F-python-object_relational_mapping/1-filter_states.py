@@ -2,13 +2,13 @@
 """Defines a method to get states"""
 
 import MySQLdb
+from sys import argv
 
-
-def getAllStates():
+if __name__ == '__main__':
     """Defines a method to get states"""
     conn = MySQLdb.connect(
-            host="localhost", port=3306, user="root", passwd="root",
-            db="hbtn_0e_0_usa", charset="utf8"
+            host="localhost", port=3306, user=argv[1], passwd=argv[2],
+            db=argv[3], charset="utf8"
         )
     cur = conn.cursor()
     cur.execute(
@@ -19,7 +19,3 @@ def getAllStates():
         print(row)
     cur.close()
     conn.close()
-
-
-if __name__ == '__main__':
-    getAllStates()
