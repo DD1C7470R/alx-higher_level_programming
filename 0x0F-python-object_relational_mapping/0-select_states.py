@@ -11,7 +11,8 @@ def getAllStates(user, password, db):
             db="hbtn_0e_0_usa", charset="utf8"
         )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states")
+    query = "SELECT * FROM states ORDER BY states.id ASC"
+    cur.execute(query)
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
