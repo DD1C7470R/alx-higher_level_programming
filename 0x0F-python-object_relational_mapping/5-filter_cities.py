@@ -23,9 +23,9 @@ if __name__ == '__main__':
             BINARY '{}' ORDER BY c.id ASC".format(argv[4]).strip("'")
         )
         query_rows = cur.fetchall()
-        myset = set()
+        myset = []
         for row in query_rows:
-            myset.add(row[1])
+            myset.append(row[1])
         print(", ".join(myset))
     cur.close()
     conn.close()
