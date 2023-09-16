@@ -14,8 +14,8 @@ class State(Base):
     name = Column('name', String(128))
     cities = relationship('City', back_populates='state')
 
-    def __init__(self, name):
-        self.name = name
+    #def __init__(self, name):
+     #   self.name = name
 
-    def __repr__(self):
-        return f'{self.id}: {self.name}'
+    #def __repr__(self):
+     #   return f'{self.id}: {self.name}'
