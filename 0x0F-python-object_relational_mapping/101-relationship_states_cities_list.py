@@ -24,4 +24,4 @@ if __name__ == "__main__":
         print(f'{state.id}: {state.name}')
         for city in state.cities:
             print('    ', end="")
-            print('{}: {}'.format(city.id, city.name))
+            print(city.id, city.name, sep=': ')
