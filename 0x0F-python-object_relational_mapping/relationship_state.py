@@ -18,4 +18,4 @@ class State(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column('name', String(128))
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
-    state = relationship('State', back_populates='cities')
+    cities = relationship('City')
