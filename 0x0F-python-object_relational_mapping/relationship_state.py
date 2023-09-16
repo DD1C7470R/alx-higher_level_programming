@@ -15,7 +15,7 @@ class State(Base):
     """
     Represents a state in the database.
     """
+    __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column('name', String(128))
-    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
-    cities = relationship('City')
+    cities = relationship('City', back_populates='state')
