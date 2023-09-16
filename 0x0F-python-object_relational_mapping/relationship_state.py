@@ -14,15 +14,8 @@ Base = declarative_base()
 class State(Base):
     """
     Represents a state in the database.
-
-    Attributes:
-        __tablename__ (str): The name of the database table.
-        id (int): The primary key of the state record (auto-incremented).
-        name (str): The name of the state (maximum 128 characters).
-        cities (Relationship): A relationship to associated cities
-            using the "City" class.
     """
-    __tablename__ = "states"
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
-    name = Column(String(128), nullable=False)
-    cities = relationship("City", cascade="all, delete", overlaps="state")
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column('name', String(128))
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
+    state = relationship('State', back_populates='cities')
