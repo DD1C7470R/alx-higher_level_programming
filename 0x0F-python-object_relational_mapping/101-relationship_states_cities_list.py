@@ -14,7 +14,7 @@ localhost:3306/{argv[3]}")
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(State).outerjoin(City)§:xa.order_by(State.id, City.id).all()
+    query = session.query(State).outerjoin(City).order_by(State.id, City.id).all()
 
     for states in query:
         print(f"{states.id}: {states.name}")
