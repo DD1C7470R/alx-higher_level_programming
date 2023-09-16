@@ -21,6 +21,6 @@ localhost:3306/{}".format(argv[1], argv[2], argv[3]))
     for states in results:
         print("{}: {}".format(states.id, states.name))
         for city in states.cities:
-            print(" {}: {}".format(city.id, city.name))
+            print("\t{}: {}".format(city.id, city.name))
 
     session.close()
