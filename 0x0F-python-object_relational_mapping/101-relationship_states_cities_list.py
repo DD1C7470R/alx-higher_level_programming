@@ -20,6 +20,6 @@ localhost:3306/{argv[3]}")
     for states in results:
         print(f"{states.id}: {states.name}")
         for city in states.cities:
-            print(f"\t{city.id}: {city.name}")
+            print(f"    {city.id}: {city.name}")
 
     session.close()
