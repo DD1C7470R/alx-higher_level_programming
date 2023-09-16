@@ -9,8 +9,8 @@ from sqlalchemy.orm import sessionmaker
 from sys import argv
 
 if __name__ == "__main__":
-    engine = create_engine(f"mysql+mysqldb://{argv[1]}:{argv[2]}@\
-localhost:3306/{argv[3]}")
+    engine = create_engine("mysql+mysqldb://{}:{}@\
+localhost:3306/{}".format(argv[1], argv[2], argv[3]))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -18,8 +18,8 @@ localhost:3306/{argv[3]}")
         .order_by(State.id, City.id).all()
 
     for states in results:
-        print(f"{states.id}: {states.name}")
+        print("{}: {}".format(states.id, states.name))
         for city in states.cities:
-            print(f"    {city.id}: {city.name}")
+            print("\t{}: {}".format(city.id, city.name))
 
     session.close()
