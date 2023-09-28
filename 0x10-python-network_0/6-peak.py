@@ -16,4 +16,3 @@ def find_peak(my_list):
         else:
             left = mid + 1
     return my_list[left]
-
