@@ -7,8 +7,13 @@ def find_peak(my_list):
     if len(my_list) == 0:
         return None
 
-    peak_val = my_list[0]
-    for val in my_list:
-        if val > peak_val:
-            peak_val = val
-    return peak_val
+    left, right = 0, len(my_list) - 1
+
+    while left < right:
+        mid = left + (right - left) // 2
+        if my_list[mid] > my_list[mid + 1]:
+            right = mid
+        else:
+            left = mid + 1
+    return my_list[left]
+
