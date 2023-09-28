@@ -3,6 +3,7 @@
 
 
 def find_peak(my_list):
+    """ Defines the function find peak"""
     if len(my_list) == 0:
         return None
 
