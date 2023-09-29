@@ -4,10 +4,10 @@ import requests
 import sys
 
 
- if __name__ == "__main__":
+if __name__ == "__main__":
     user = sys.argv[1]
     pwd = sys.argv[2]
-    response = r = requests.get(
+    response = requests.get(
         f"https://api.github.com/users/{user}",
         headers={"Authorization": f"token {pwd}"},
     )
