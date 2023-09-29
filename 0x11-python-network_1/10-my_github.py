@@ -12,8 +12,8 @@ if __name__ == '__main__':
     headers['Authorization'] = f"Basic {sys.argv[1]}:{sys.argv[2]}"
 
     res = requests.get(f'https://api.github.com/users/{username}', headers)
-    content = res.json()
-    if res.status_code == 200 and content:
+    if res.status_code == 200:
+        content = res.json()
         print(content['id'])
     else:
         print('None')
