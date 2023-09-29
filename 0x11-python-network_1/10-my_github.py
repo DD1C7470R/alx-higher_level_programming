@@ -4,11 +4,11 @@ import requests
 import sys
 
 
-if __name__ == '__main__':
-    headers = {}
-    username = sys.argv[1]
-    headers['Authorization'] = f"token {sys.argv[2]}"
-
-    res = requests.get(f'https://api.github.com/users/{username}', headers)
-    content = res.json()
-    print(content.get('id'))
+ if __name__ == "__main__":
+    user = sys.argv[1]
+    pwd = sys.argv[2]
+    response = r = requests.get(
+        f"https://api.github.com/users/{user}",
+        headers={"Authorization": f"token {pwd}"},
+    )
+    print(response.json().get("id"))
