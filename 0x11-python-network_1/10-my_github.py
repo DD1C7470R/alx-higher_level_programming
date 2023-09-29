@@ -9,7 +9,7 @@ if __name__ == '__main__':
     username = sys.argv[1]
     headers['X-GitHub-Api-Version'] = "2022-11-28"
     headers['Accept'] = "application/vnd.github+json"
-    headers['Authorization'] = f"Bearer {sys.argv[2]}"
+    headers['Authorization'] = f"Basic {sys.argv[1]}:{sys.argv[2]}"
 
     res = requests.get(f'https://api.github.com/users/{username}', headers)
     content = res.json()
