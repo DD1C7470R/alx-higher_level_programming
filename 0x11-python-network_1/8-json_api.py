@@ -5,7 +5,7 @@ import sys
 
 
 if __name__ == '__main__':
-    body = {}
+    body ={}
     if len(sys.argv) == 2:
         letter = sys.argv[1]
     else:
@@ -14,8 +14,8 @@ if __name__ == '__main__':
     body['q'] = letter
     res = requests.post('http://0.0.0.0:5000/search_user', data=body)
     if res.headers.get('content-type') == 'application/json':
-        content = res.json()
-        if content:
+        data = res.json()
+        if data:
             print("[{}] {}".format(data.get('id'), data.get('name')))
         else:
             print("No result")
