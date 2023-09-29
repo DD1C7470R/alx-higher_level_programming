@@ -5,7 +5,7 @@ import sys
 
 
 if __name__ == '__main__':
-    body ={}
+    body = {}
     if len(sys.argv) == 2:
         letter = sys.argv[1]
     else:
