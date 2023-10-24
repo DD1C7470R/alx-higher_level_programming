@@ -9,6 +9,7 @@ let counter = 0;
 request(movieUrl, function (error, response) {
   if (error) {
     console.error('error:', error);
+    return;
   }
   const resultInjson = JSON.parse(response.body);
 
