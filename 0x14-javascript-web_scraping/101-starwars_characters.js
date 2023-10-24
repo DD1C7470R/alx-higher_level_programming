@@ -16,4 +16,5 @@ function printCharacters (characters, index) {
         printCharacters(characters, index + 1);
       }
     }
-  });}
+  });
+}
