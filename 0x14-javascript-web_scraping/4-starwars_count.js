@@ -17,7 +17,7 @@ request(movieUrl, function (error, response) {
 
   for (const obj of data) {
     for (const character of obj.characters) {
-      if (character === 'https://swapi-api.alx-tools.com/api/people/18/') {
+      if (character.includes('https://swapi-api.alx-tools.com/api/people/18') {
         counter += 1;
       }
     }
