@@ -22,5 +22,5 @@ request(movieUrl, function (error, response) {
       }
     }
   }
-  console.log(counter);
+  console.log(String(counter));
 });
