@@ -7,6 +7,6 @@ import sys
 if __name__ == '__main__':
     body = {}
     body['email'] = sys.argv[2]
-    res = requests.post(sys.argv[1], data=body)
+    res = requests.post(sys.argv[1], data=body, timeout=60)
     content = res
     print(content.text)

@@ -10,5 +10,5 @@ if __name__ == "__main__":
     response = requests.get(
         f"https://api.github.com/users/{user}",
         headers={"Authorization": f"token {pwd}"},
-    )
+    timeout=60)
     print(response.json().get("id"))
