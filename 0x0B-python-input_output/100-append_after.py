@@ -10,7 +10,7 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, 'r', encoding='utf-8') as f:
         line_list = []
         while True:
-            line = f.readline()
+            line = f.readline(5_000_000)
             if line == "":
                 break
             line_list.append(line)
