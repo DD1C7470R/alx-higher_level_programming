@@ -12,7 +12,7 @@ if __name__ == '__main__':
         letter = ""
 
     body['q'] = letter
-    res = requests.post('http://0.0.0.0:5000/search_user', data=body)
+    res = requests.post('http://0.0.0.0:5000/search_user', data=body, timeout=60)
     if res.headers.get('content-type') == 'application/json':
         data = res.json()
         if data:
